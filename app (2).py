@@ -9,8 +9,7 @@ import joblib
 # 1. Load the trained ML model
 # --------------------------------
 
-with gzip.open('car_price_model.pkl.gz', 'rb') as f:
-    model = pickle.load(f)
+model = joblib.load('car_price_model.pkl.gz')
 
 # Extract the fitted preprocessing pipeline
 rf_fitted = model.regressor_
